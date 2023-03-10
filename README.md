@@ -1,7 +1,19 @@
-# Vue 3 + Vite
+// 本项目仅供学习使用
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# 基于vue3 + vant4 开发小米商城
 
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- 开发事项
+    - app.vue
+        - tabbar 页面切换功能
+        - 页面路由
+    - 首页
+        - 搜索栏
+        - 页面标签导航
+        - 单页应用
+        - 下拉刷新
+    - 分类页
+    - 米圈页
+    - 购物车页
+    - 个人主页 
+    - 登入页
+    
