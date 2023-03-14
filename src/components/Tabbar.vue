@@ -19,7 +19,7 @@
 </template>
 
 <script setup>
-    import { reactive } from 'vue'
+    import { reactive, onMounted } from 'vue'
 
     const state = reactive({
         active: 0
@@ -27,6 +27,7 @@
     const onChange = (event) => {
         // console.log(event);
         state.active = event
+        localStorage.setItem('page', event)
     }
 </script>
 

@@ -1,6 +1,5 @@
 <script setup>
   import Tabbar from '@/components/Tabbar.vue'
-
 </script>
 
 <template>

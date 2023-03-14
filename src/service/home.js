@@ -12,3 +12,6 @@ export const getProductList = () => {
 export const getnoteList = () => {
     return axios.get('/noteList')
 }
+export const getcommentList = () => {
+    return axios.get('/commentList')
+}

@@ -3,6 +3,7 @@ import swiperList from './data/swiperList'
 import moreList from './data/moreList'
 import productList from './data/productList'
 import noteList from './data/noteList'
+import commentList from './data/comments'
 
 // Mock.setup({
 //     timeout: '50-1000' // 随机的延迟时间，模拟请求耗时
@@ -32,5 +33,11 @@ Mock.mock(/\/noteList/, 'get', () => {
     return {
         code: 0,
         result: noteList
+    }
+})
+Mock.mock(/\/commentList/, 'get', () => {
+    return {
+        code: 0,
+        result: commentList
     }
 })

@@ -25,7 +25,21 @@
             </div>
         </div>
         <div class="produtList">
-            <ProductPage :productList="productList"/>
+            <ProductPage v-if="state.page === 0" :productList="productList"/>
+            <ProductPage v-if="state.page === 1" :productList="noteList"/>
+            <ProductPage v-if="state.page === 2" :productList="productList"/>
+            <ProductPage v-if="state.page === 3" :productList="noteList"/>
+            <ProductPage v-if="state.page === 4" :productList="productList"/>
+            <ProductPage v-if="state.page === 5" :productList="noteList"/>
+            <ProductPage v-if="state.page === 6" :productList="productList"/>
+            <ProductPage v-if="state.page === 7" :productList="noteList"/>
+            <ProductPage v-if="state.page === 8" :productList="productList"/>
+            <ProductPage v-if="state.page === 9" :productList="noteList"/>
+            <ProductPage v-if="state.page === 10" :productList="productList"/>
+            <ProductPage v-if="state.page === 11" :productList="noteList"/>
+            <ProductPage v-if="state.page === 12" :productList="productList"/>
+            <ProductPage v-if="state.page === 13" :productList="noteList"/>
+            <ProductPage v-if="state.page === 14" :productList="productList"/>
         </div>
     </div>
 </template>
@@ -36,14 +50,19 @@ import { useHomeStore } from '@/store/home'
 import Search from '@/components/Search.vue'
 import ProductPage from '@/components/ProductPage.vue'
 
-const active = ref(0) 
+const active = ref(0)
+const state = reactive({
+    page: 0
+})
 const onChange = (event) => {
-    console.log(event)
+    state.page = event
 }
 const homeStore = useHomeStore()
 const productList = computed(() => homeStore.productList)
+const noteList = computed(() => homeStore.noteList)
 onMounted(async () => {
     await homeStore.getProductList()
+    await homeStore.getnoteList()
 })
 </script>
 

@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { getSwiperList, getMoreList, getProductList, getnoteList } from '@/service/home.js'
+import { getSwiperList, getMoreList, getProductList, getnoteList, getcommentList } from '@/service/home.js'
 
 export const useHomeStore = defineStore('home', {
     state: () => { // 中央状态
@@ -7,7 +7,8 @@ export const useHomeStore = defineStore('home', {
             swiperList: [],
             moreList: [],
             productList: [],
-            noteList: []
+            noteList: [],
+            commentList: []
         }
     },
     actions: { // 接管了数据请求
@@ -28,5 +29,9 @@ export const useHomeStore = defineStore('home', {
             const { result } = await getnoteList()
             this.noteList = result
         },
+        async getcommentList() {
+            const { result } = await getcommentList()
+            this.commentList = result
+        }
     }
 })
