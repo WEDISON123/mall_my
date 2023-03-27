@@ -18,7 +18,8 @@ import {
     Icon,
     Sidebar,
     SidebarItem,
-    Card
+    Card,
+    Image as VanImage
 } from 'vant'
 import '@/mock/index.js'
 import 'vant/lib/index.css'
@@ -42,4 +43,5 @@ app
     .use(Sidebar)
     .use(SidebarItem)
     .use(Card)
+    .use(VanImage)
     .mount('#app')

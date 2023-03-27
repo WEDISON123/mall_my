@@ -15,3 +15,9 @@ export const getnoteList = () => {
 export const getcommentList = () => {
     return axios.get('/commentList')
 }
+export const getwaterfallL = () => {
+    return axios.get('/waterfallL')
+}
+export const getwaterfallR = () => {
+    return axios.get('/waterfallR')
+}

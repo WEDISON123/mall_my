@@ -2,7 +2,7 @@
     <div class="container">
         <div>
             <van-swipe class="swipe" :autoplay="3000">
-                <van-swipe-item v-for="swipe of swiperList" :key="id" v-lazy="swipe">
+                <van-swipe-item v-for="swipe of swiperList" :key="id">
                     <img class="swipe-img" :src="swipe.imgSrc">
                 </van-swipe-item>
             </van-swipe>
@@ -19,7 +19,7 @@
         </div>
         <div class="popProducts">
             <div class="imgBox">
-                <img 
+                <img
                     src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/16305100fd7913dd727e8906b97e8998.png?f=webp&w=537&h=762&bg=DDE2E6"
                 >
             </div>
@@ -92,7 +92,7 @@ defineProps({
 .container
     background #efefef
 .swipe
-    width 100%
+    // width 100%
     height 22vh
     .swipe-img
         max-width 100%

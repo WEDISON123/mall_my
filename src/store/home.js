@@ -1,5 +1,13 @@
 import { defineStore } from "pinia";
-import { getSwiperList, getMoreList, getProductList, getnoteList, getcommentList } from '@/service/home.js'
+import { 
+    getSwiperList, 
+    getMoreList, 
+    getProductList, 
+    getnoteList, 
+    getcommentList, 
+    getwaterfallL,
+    getwaterfallR,
+} from '@/service/home.js'
 
 export const useHomeStore = defineStore('home', {
     state: () => { // 中央状态
@@ -8,7 +16,9 @@ export const useHomeStore = defineStore('home', {
             moreList: [],
             productList: [],
             noteList: [],
-            commentList: []
+            commentList: [],
+            waterfallL: [],
+            waterfallR: []
         }
     },
     actions: { // 接管了数据请求
@@ -32,6 +42,14 @@ export const useHomeStore = defineStore('home', {
         async getcommentList() {
             const { result } = await getcommentList()
             this.commentList = result
+        },
+        async getwaterfallL() {
+            const { result } = await getwaterfallL()
+            this.waterfallL = result
+        },
+        async getwaterfallR() {
+            const { result } = await getwaterfallR()
+            this.waterfallR = result
         }
     }
 })
