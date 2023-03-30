@@ -1,58 +1,53 @@
 <template>
     <Search/>
     <div class="tab">
-        <van-tabs animated :change="onChange">
+        <van-tabs animated>
         <van-tab title="推荐">
             <div class="pageScroll">
                 <Recommend
                     :swiperList="swiperList"
                     :moreList="moreList"
                     :productList="productList"
-                    :adImg="adImg"
                     :noteList="noteList"
                 />
             </div>
         </van-tab>
-        <van-tab title="智能"><van-skeleton title row="4"/>
+        <van-tab title="智能">
             <div class="pageScroll">
                 <Recommend
                     :swiperList="swiperList"
                     :moreList="moreList"
                     :productList="productList"
-                    :adImg="adImg"
                     :noteList="noteList"
                 />
             </div>
         </van-tab>
-        <van-tab title="电视"><van-skeleton title row="3"/>
+        <van-tab title="电视">
             <div class="pageScroll">
                 <Recommend
                     :swiperList="swiperList"
                     :moreList="moreList"
                     :productList="productList"
-                    :adImg="adImg"
                     :noteList="noteList"
                 />
             </div>
         </van-tab>
-        <van-tab title="家电"><van-skeleton title row="5"/>
+        <van-tab title="家电">
             <div class="pageScroll">
                 <Recommend
                     :swiperList="swiperList"
                     :moreList="moreList"
                     :productList="productList"
-                    :adImg="adImg"
                     :noteList="noteList"
                 />
             </div>
         </van-tab>
-        <van-tab title="笔记本"><van-skeleton title row="4"/>
+        <van-tab title="笔记本">
             <div class="pageScroll">
                 <Recommend
                     :swiperList="swiperList"
                     :moreList="moreList"
                     :productList="productList"
-                    :adImg="adImg"
                     :noteList="noteList"
                 />
             </div>
@@ -79,6 +74,7 @@ onMounted(async () => {
     await homeStore.getProductList()
     await homeStore.getnoteList()
 })
+
 </script>
 
 <style lang="stylus" scoped>

@@ -2,7 +2,7 @@
     <div class="container">
         <div>
             <van-swipe class="swipe" :autoplay="3000">
-                <van-swipe-item v-for="swipe of swiperList" :key="id">
+                <van-swipe-item v-for="swipe of swiperList" :key="swipe.id">
                     <img class="swipe-img" :src="swipe.imgSrc">
                 </van-swipe-item>
             </van-swipe>
@@ -11,7 +11,7 @@
             <van-grid :column-num="5">
                 <van-grid-item 
                     v-for="item of moreList" 
-                    :key="id"
+                    :key="item.id"
                     :icon="item.icon"
                     :text="item.title"
                 ></van-grid-item>
@@ -96,7 +96,6 @@ defineProps({
     height 22vh
     .swipe-img
         max-width 100%
-        max-height 100%
 .popProducts
     height 40vh
     width 100%
@@ -109,7 +108,6 @@ defineProps({
             width 100%
     img
         max-width 100%
-        max-height 100%
 .productList
     padding-top 1vh
     padding-bottom 1vh
@@ -118,7 +116,6 @@ defineProps({
     width 100%
     img
         max-width 100%
-        max-height 100%
 .space
     height 10vh
 </style>

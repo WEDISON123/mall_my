@@ -34,6 +34,7 @@
 <style lang="stylus" scoped>
     .tabbar
         display flex
+        z-index 99
         .routerLink
             flex 1
             margin-top .5rem

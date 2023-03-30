@@ -101,6 +101,7 @@
         </div>
         <div class="space" style="height: 10vh;"></div>
     </div>
+    <van-back-top bottom="10vh"/>
 </template>
 
 <script setup>
@@ -218,9 +219,11 @@ onMounted(async () => {
                     padding 0 0.5em
                     border-radius 1.5vh
     .userB
+        background #fff
         height 25vh
         width 90vw
         margin-left 5vw
+        margin-top 1vh
         .user_account
             // background #abcdef
             height 30%

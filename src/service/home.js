@@ -21,3 +21,6 @@ export const getwaterfallL = () => {
 export const getwaterfallR = () => {
     return axios.get('/waterfallR')
 }
+export const getdetail = () => {
+    return axios.get('/detail')
+}

@@ -7,6 +7,7 @@ import {
     getcommentList, 
     getwaterfallL,
     getwaterfallR,
+    getdetail
 } from '@/service/home.js'
 
 export const useHomeStore = defineStore('home', {
@@ -18,7 +19,10 @@ export const useHomeStore = defineStore('home', {
             noteList: [],
             commentList: [],
             waterfallL: [],
-            waterfallR: []
+            waterfallR: [],
+            detail: [],
+            tabShow: true,
+            cart: []
         }
     },
     actions: { // 接管了数据请求
@@ -50,6 +54,16 @@ export const useHomeStore = defineStore('home', {
         async getwaterfallR() {
             const { result } = await getwaterfallR()
             this.waterfallR = result
+        },
+        async getdetail() {
+            const { result } = await getdetail()
+            this.detail = result
+        },
+        async changeTabShow() {
+            this.tabShow = !this.tabShow
+        },
+        async pushCart(id) {
+            this.cart.push(id)
         }
     }
 })

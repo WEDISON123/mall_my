@@ -19,7 +19,11 @@ import {
     Sidebar,
     SidebarItem,
     Card,
-    Image as VanImage
+    Image as VanImage,
+    BackTop,
+    Checkbox,
+    CheckboxGroup,
+    SwipeCell
 } from 'vant'
 import '@/mock/index.js'
 import 'vant/lib/index.css'
@@ -44,4 +48,8 @@ app
     .use(SidebarItem)
     .use(Card)
     .use(VanImage)
+    .use(BackTop)
+    .use(Checkbox)
+    .use(CheckboxGroup)
+    .use(SwipeCell)
     .mount('#app')
