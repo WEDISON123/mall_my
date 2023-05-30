@@ -71,8 +71,8 @@ const checkedGroup = ref(null)
 const checkAll = () => {
     if(checked.value) {
         checkedGroup.value.toggleAll(true)
-        for(let i =0; i < cartList.length; i ++) {
-            state.all += parseInt(cartList[i].price) * cartList[i].num
+        for(let i =0; i < state.cartList.length; i ++) {
+            state.all += parseInt(state.cartList[i].price) * state.cartList[i].num
         }
     }else {
         checkedGroup.value.toggleAll()

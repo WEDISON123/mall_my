@@ -1,6 +1,6 @@
 <template>
     <van-sticky>
-        <Search/>
+        <Search :isLogin="isLogin"/>
     </van-sticky>
     <div class="component">
         <Comments :commentList="commentList"/>
@@ -15,6 +15,7 @@ import Search from '@/components/Search.vue'
 
 const store = useHomeStore()
 const commentList = computed(() => store.commentList)
+const isLogin = computed(() => store.isLogin)
 onMounted(async () => {
     await store.getcommentList()
 })

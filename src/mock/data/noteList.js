@@ -10,7 +10,7 @@ export default [
         id: 2,
         imgSrc: 'https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202207191154_4d238e772ff74153180955e54dbb0366.jpg?thumb=1&q=90&w=344&h=280',
         productName: 'Redmi G 游戏本',
-        desc: '16英寸 2.5K 165Hz 电竞大屏',
+        desc: '16英寸|2.5K|165Hz 电竞大屏',
         price: '7499'
     },
     {

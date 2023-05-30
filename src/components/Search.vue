@@ -10,14 +10,27 @@
             background=""
             placeholder="搜索商品名称"
         />
-        <div class="admin-icon">
-            <img src="@/assets/profile.svg" alt="">
+        <div class="admin-icon" @click="toLogin">
+            <img src="@/assets/profile.svg" v-if="!isLogin">
+            <img src="http://i8.mifile.cn/b2c-mimall-media/fa83661ee38a1495b26a59e73ae15eb3.png" v-if="isLogin">
         </div>
     </div>
 </template>
 
 <script setup>
-    
+    import { useRouter } from 'vue-router'
+
+    const router = useRouter()
+    const toLogin = () => {
+        router.push('/login')
+    }
+
+    defineProps({
+        isLogin: {
+            type: Boolean,
+            default: false
+        }
+    })
 </script>
 
 <style lang="stylus" scoped>

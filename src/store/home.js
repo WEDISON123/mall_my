@@ -22,7 +22,8 @@ export const useHomeStore = defineStore('home', {
             waterfallR: [],
             detail: [],
             tabShow: true,
-            cart: []
+            cart: [],
+            isLogin: false
         }
     },
     actions: { // 接管了数据请求
@@ -64,6 +65,9 @@ export const useHomeStore = defineStore('home', {
         },
         async pushCart(id) {
             this.cart.push(id)
+        },
+        async login() {
+            this.isLogin = !this.isLogin
         }
     }
 })

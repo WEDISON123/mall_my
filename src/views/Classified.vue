@@ -1,6 +1,6 @@
 <template>
     <van-sticky>
-        <Search/>
+        <Search :isLogin="isLogin"/>
     </van-sticky>
     <div class="container">
         <div class="sidebar">
@@ -60,6 +60,7 @@ const onChange = (event) => {
 const homeStore = useHomeStore()
 const productList = computed(() => homeStore.productList)
 const noteList = computed(() => homeStore.noteList)
+const isLogin = computed(() => homeStore.isLogin)
 onMounted(async () => {
     await homeStore.getProductList()
     await homeStore.getnoteList()

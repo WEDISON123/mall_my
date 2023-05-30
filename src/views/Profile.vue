@@ -12,12 +12,16 @@
         </div>
     </div>
     <div class="profile">
-        <div class="userA">
+        <div class="userA" @click="toLogin">
             <van-sticky :offset-top="2">
-                <div class="user_avatar" :style="state.avaStyle"><img src="@/assets/profile.svg" alt=""></div>
+                <div class="user_avatar" :style="state.avaStyle">
+                    <img src="@/assets/profile.svg" v-if="!isLogin">
+                    <img src="http://i8.mifile.cn/b2c-mimall-media/fa83661ee38a1495b26a59e73ae15eb3.png" v-if="isLogin">
+                </div>
             </van-sticky>
             <div class="user_info">
-                <div class="info-name">未登入</div>
+                <div class="info-name" v-if="!isLogin">未登入</div>
+                <div class="info-name" v-if="isLogin">aaa</div>
                 <div class="info-id">
                     <div class="id">小米ID:1313513543</div>
                     <div class="medal">勋章<van-icon name="arrow"/></div>
@@ -108,17 +112,25 @@
 import Waterfall from '../components/Waterfall.vue'
 import { onMounted, reactive, computed } from 'vue'
 import { useHomeStore } from '@/store/home'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const homeStore = useHomeStore()
 const swiperList = computed(() => homeStore.swiperList)
 const waterfallL = computed(() => homeStore.waterfallL)
 const waterfallR = computed(() => homeStore.waterfallR)
+const isLogin = computed(() => homeStore.isLogin)
 
 const state = reactive({
     navShow: true,
     nameStyle: 'opacity: 0',
     avaStyle: 'height:calc(40px + 10px*(30/30));width:calc(40px + 10px*(30/30))'
 })
+
+const toLogin = () => {
+    router.push('/login')
+}
 
 onMounted(async () => {
     await homeStore.getSwiperList()

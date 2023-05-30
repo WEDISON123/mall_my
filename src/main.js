@@ -23,7 +23,10 @@ import {
     BackTop,
     Checkbox,
     CheckboxGroup,
-    SwipeCell
+    SwipeCell,
+    Form,
+    Field,
+    CellGroup
 } from 'vant'
 import '@/mock/index.js'
 import 'vant/lib/index.css'
@@ -52,4 +55,7 @@ app
     .use(Checkbox)
     .use(CheckboxGroup)
     .use(SwipeCell)
+    .use(Form)
+    .use(Field)
+    .use(CellGroup)
     .mount('#app')

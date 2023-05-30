@@ -1,5 +1,5 @@
 <template>
-    <Search/>
+    <Search :isLogin="isLogin"/>
     <div class="tab">
         <van-tabs animated>
         <van-tab title="推荐">
@@ -67,6 +67,7 @@ const swiperList = computed(() => homeStore.swiperList)
 const moreList = computed(() => homeStore.moreList)
 const productList = computed(() => homeStore.productList)
 const noteList = computed(() => homeStore.noteList)
+const isLogin = computed(() => homeStore.isLogin)
 
 onMounted(async () => {
     await homeStore.getSwiperList()
